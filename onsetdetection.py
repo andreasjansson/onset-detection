@@ -10,7 +10,7 @@ def detect_onsets(sig, fftwin = 512):
     hfcs = np.array(map(get_hfc, spectrogram))
     hfcs /= max(hfcs)
     hfcs = filter_hfcs(hfcs)
-    peak_indices = [i for i, x in enumerate(hfcs) if x > 0] * fftwin
+    peak_indices = np.array([i for i, x in enumerate(hfcs) if x > 0]) * fftwin
     return peak_indices
 
 def get_hfc(spectrum):
