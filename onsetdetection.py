@@ -14,7 +14,7 @@ def detect_onsets(sig, fftwin = 512):
     return peak_indices
 
 def get_hfc(spectrum):
-    hfc = np.sum(np.pow(spectrum, 2) * np.arange(i + 1, len(spectrum) + 1))
+    hfc = np.sum(np.power(spectrum, 2) * np.arange(1, len(spectrum) + 1))
     return hfc
 
 def generate_spectrogram(audio, window_size):
