@@ -2,7 +2,7 @@ Onset Detector
 ==============
 
 Simple onset detector. Detects onsets by finding peaks in high frequency content,
-and filtering said peaks using hill climbing.
+and filtering found peaks using hill climbing.
 
 Example usage
 -------------
